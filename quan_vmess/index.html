@@ -68,7 +68,7 @@
 			try{
 				var baseStr = JSON.parse(Base64.decode(configStr));
 				baseStr.tls = "tls" == baseStr.tls
-				var baseStrAdd1 = baseStr.ps+" = vmess,"+baseStr.add+","+baseStr.port+","+baseStr.type+","+"\""+baseStr.id+"\""+","+"group=Fndroid,"+"over-tls="+baseStr.tls+",certificate=1";
+				var baseStrAdd1 = baseStr.ps+" = vmess,"+baseStr.add+","+baseStr.port+","+baseStr.type+","+"\""+baseStr.id+"\""+","+"over-tls="+baseStr.tls+",certificate=1";
 				var baseStrAdd2 = '';
 				if("http" == baseStr.net || "ws" == baseStr.net){
 					baseStrAdd2 = ",obfs="+baseStr.net +",obfs-path="+"\""+baseStr.path+"\""+"obfs-header="+"\""+"Host:"+baseStr.host+"[Rr][Nn]User-Agent:"+navigator.userAgent;
