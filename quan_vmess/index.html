@@ -67,14 +67,14 @@
 			}
 			try{
 				var baseStr = JSON.parse(Base64.decode(configStr));
-				baseStr.tls = "tls" == baseStr.tls
+					baseStr.tls = "tls" == baseStr.tls
 				if(baseStr.ps == "undefined" || baseStr.ps == null || baseStr.ps == "") {
 					baseStr.ps = baseStr.add
 				}
 				if(baseStr.type  == "undefined" || baseStr.type  == null || baseStr.type  == "") {
 					baseStr.type = 'none'
 				}
-				var baseStrAdd1 = baseStr.ps+" = vmess,"+baseStr.add+","+baseStr.port+","+baseStr.type+","+"\""+baseStr.id+"\""+","+"over-tls="+baseStr.tls+",certificate=1";
+				var baseStrAdd1 = baseStr.ps+" = vmess,"+baseStr.add+","+baseStr.port+","+baseStr.type+","+"\""+baseStr.id+"\""+","+"over-tls="+baseStr.tls+","+"tls-host="+baseStr.host+",certificate=1";
 				var baseStrAdd2 = '';
 				if("http" == baseStr.net || "ws" == baseStr.net){
 					baseStrAdd2 = ",obfs="+baseStr.net +",obfs-path="+"\""+baseStr.path+"\""+"obfs-header="+"\""+"Host:"+baseStr.host+"[Rr][Nn]User-Agent:"+navigator.userAgent;
