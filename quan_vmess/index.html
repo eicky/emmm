@@ -77,7 +77,7 @@
 				var baseStrAdd1 = baseStr.ps+" = vmess,"+baseStr.add+","+baseStr.port+","+baseStr.type+","+"\""+baseStr.id+"\""+","+"over-tls="+baseStr.tls+","+"tls-host="+baseStr.host+",certificate=1";
 				var baseStrAdd2 = '';
 				if("http" == baseStr.net || "ws" == baseStr.net){
-					baseStrAdd2 = ",obfs="+baseStr.net +",obfs-path="+"\""+baseStr.path+"\""+"obfs-header="+"\""+"Host:"+baseStr.host+"[Rr][Nn]User-Agent:"+navigator.userAgent;
+					baseStrAdd2 = ",obfs="+baseStr.net +",obfs-path="+"\""+baseStr.path+"\""+"obfs-header="+"\""+"Host:"+baseStr.host+"\"";
 				};
 				var baseStrAdd3 = baseStrAdd1 + baseStrAdd2;
 				var baseData = Base64.encode(baseStrAdd3);
